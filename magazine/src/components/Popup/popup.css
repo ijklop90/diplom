@@ -1,0 +1,28 @@
+.popup {
+    position: fixed;
+    display: inline-grid;
+
+    top:70px;
+    right:10px;
+    z-index: 100;
+    border: 1px solid #252525;
+    border-radius: 5px;
+}
+.popup:hover {
+    background-color: #999;
+}
+
+.popup-li {
+    display:block;
+    background-color: rgb(72, 72, 72) !important;
+    border-bottom: 1px solid #252525!important;
+}
+
+.shop-link {
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+
+.label {
+    font-weight: 600;
+}

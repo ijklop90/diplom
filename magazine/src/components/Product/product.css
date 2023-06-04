@@ -1,0 +1,30 @@
+.post-img {
+    margin: 0 auto;
+    display: block;
+    width:100%;
+}
+
+.title-post {
+    overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.post-card {
+    padding:10px;
+    background-color: #2e2e2e;
+}
+
+.shop-btn {
+    width:100%;
+}
+
+.wrap-shop {
+    display: flex;
+    text-align: center;
+    background: rgb(92, 92, 92);
+}
+
+.count-shop {
+    font-size: 20px;
+}

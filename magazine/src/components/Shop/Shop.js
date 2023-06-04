@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import { addData } from '../../services/services-workers'
+// import { addData } from '../../services/services-workers'
 
 const currentURL = 'http://localhost:5000/add/1'
 

@@ -98,6 +98,9 @@ app.get('/', (req,res)=> {
   res.json(jsonData)
 })
 
+app.get('/product/:id', (req,res)=> {
+  res.json(jsonData[req.params.id-1])
+})
 
 app.post('/add/:id', (req,res)=> {
   res.header("Access-Control-Allow-Origin")

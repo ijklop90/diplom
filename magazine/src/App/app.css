@@ -11,3 +11,11 @@ body {
 .app-main {
     background-color: #1a1a1a;
 }
+
+.window-popup {
+    line-height: 39px!important;
+}
+
+.main {
+    margin-top: 70px;
+}

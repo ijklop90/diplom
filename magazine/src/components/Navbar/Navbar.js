@@ -5,24 +5,34 @@ import './navbar.css'
 
 const Navbar = (props)=>  {
   const [toggle, setToggle] = useState(false)
-  const posts = props.data
-  const shops = props.shop
+  const {shops} = props
 
-  if(!posts) return null;
+  if(!shops) return null;
 return(
   <nav className="nav-main">
+    
     <div className="nav-wrapper">
       <a href="/" className="brand-logo">Logo</a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
       {toggle && (
-        <li key="0"><ul className="collection popup z-depth-3">
-        {shops.filter(shop=>shop.count>0).map(shop=><Popup key={shop.id}  {...shop}/>)}
-          <Link 
-            onClick={()=> setToggle(!toggle)}
+        <li>
+          <ul className="collection popup z-depth-3">
+        {shops.filter(shop=>shop['count']===1).map(shop=>
+            <Popup 
+              shops={shops} 
+              setShops={props.setShops} 
+              key={shop.id} 
+              counts={props.counts}  
+              {...shop}/>)}
+          {
+          Boolean(shops.filter(shop=>shop['count']===1).length) 
+          ? <Link onClick={()=> setToggle(!toggle)}
             className="btn waves-effect shop-link" 
             to="/shop">
               GO TO SHOP
           </Link>
+         :setToggle(!toggle) 
+        }
           </ul>
         </li>)}
         <li>

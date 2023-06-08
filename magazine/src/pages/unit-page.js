@@ -12,12 +12,13 @@ const id = useParams().id
     return(
         <div className="row">
             <h1>Товар: {shops[id].name}</h1>
-            {console.log(shops[id])}
+            {console.log(id)}
             <Product 
-                {...shops[id] }
+                key={id}
                 shops={shops}
-                setShops={props.setShops}
+                setShop={props.setShop}
                 shop={shops[id]}
+                {...shops[id]}
              />
         </div>
     )

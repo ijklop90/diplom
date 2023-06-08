@@ -13,7 +13,6 @@ const decrementData = {id, name, url, count:0}
             <div className="col s9">
                 <img src={url} alt="" className="circle"></img>
                 <p className="black-text"><strong className="label">Title: </strong>{name}</p>
-                <p className="black-text"><strong className="label">count: </strong></p>
             </div>
             <div className="col s1">    
                 <button onClick={()=>{

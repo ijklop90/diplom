@@ -4,3 +4,19 @@
     top:0;
     z-index:10;
 }
+
+#indicator {
+    display: flex;
+    justify-content: space-between;
+}
+
+span.badge {
+    min-width: 2rem;
+}
+
+span.badge.new {
+    border-radius: 20px;
+}
+.ind-badge {
+    margin-top:20px
+}

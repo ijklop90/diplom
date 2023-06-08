@@ -10,7 +10,6 @@ const Navbar = (props)=>  {
   if(!shops) return null;
 return(
   <nav className="nav-main">
-    
     <div className="nav-wrapper">
       <a href="/" className="brand-logo">Logo</a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
@@ -31,12 +30,20 @@ return(
             to="/shop">
               GO TO SHOP
           </Link>
-         :setToggle(!toggle) 
+         :<li className="popup-li collection-item avatar">
+          <div className="row">
+          Cart is empty
+          </div>
+         </li>
         }
           </ul>
         </li>)}
-        <li>
-          <Link onClick={()=> setToggle(!toggle)} to="#"> 
+        <li >
+          <Link id="indicator" onClick={()=> setToggle(!toggle)} to="#"> 
+            {shops.filter(shop=>shop['count']===1).length ?
+            <span data-badge-caption=" " className="new ind-badge z-depth-1 badge red">
+              {shops.filter(shop=>shop['count']===1).length}</span>:<div></div>
+            }
             <i className="material-icons">shopping_cart</i>{toggle}
           </Link>
         </li>
